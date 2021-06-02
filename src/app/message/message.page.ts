@@ -10,10 +10,8 @@ export class MessagePage implements OnInit {
   messages = [];
 
   constructor() { }
-
   ngOnInit() {
   }
-
   sendMessage() {
     let messages = {
       contents:this.contents  
