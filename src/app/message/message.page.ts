@@ -6,25 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message.page.scss'],
 })
 export class MessagePage implements OnInit {
-  contSearch = "";
-  contMessage = "";
-  messages = [] ;
+  contents = "";
+  messages = [];
+
   constructor() { }
 
+  ngOnInit() {
+  }
+
   sendMessage() {
-    let contact = {
-      search: this.contSearch,
-      message: this.contMessage
+    let messages = {
+      contents:this.contents  
     }
-    this.messages.push(contact);
-    this.clearField();
+    this.messages.push(messages);
+    this.clearfield();
     console.log(this.messages);
   }
-  clearField(){
-    this.contSearch = "";
-    this.contMessage = "";
-  }
-  ngOnInit() {
+  clearfield(){
+    this.contents ="";
   }
 
 }
